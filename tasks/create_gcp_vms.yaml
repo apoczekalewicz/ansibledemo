@@ -29,4 +29,20 @@
     state: present
 #    service_account_file: "ansible.json"
 #    project: "nomadic-vehicle-107012"
+  register: vm
+
+- name: create dns record
+  google.cloud.gcp_dns_resource_record_set:
+    managed_zone:
+      name: "{{ gce_managed_zone }}"
+      dnsName: "{{ domain }}."
+    name: "{{ item }}.{{ domain }}."
+    type: A
+    ttl: 0
+    target:
+    - "{{ vm.networkInterfaces[0].accessConfigs[0].natIP }}"
+    auth_kind: serviceaccount
+#    service_account_file: "ansible.json"
+#    project: "nomadic-vehicle-107012"
+    state: present
 

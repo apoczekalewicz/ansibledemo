@@ -6,3 +6,5 @@ gce_machines:
   - test
 #  - logstash
 gce_network_tags: http-server
+gce_managed_zone: poczo-net
+domain: poczo.net

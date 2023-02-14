@@ -4,5 +4,19 @@
     machine_type: "{{ gce_type }}"
     zone: "{{ gce_zone }}"
     auth_kind: serviceaccount
+#    service_account_file: "ansible.json"
+#    project: "nomadic-vehicle-107012"
     state: absent
     
+- name: delete dns record
+  google.cloud.gcp_dns_resource_record_set:
+    managed_zone: 
+      name: "{{ gce_managed_zone }}"
+      dnsName: "{{ domain }}."
+    name: "{{ item }}.{{ domain }}."
+    type: A
+    auth_kind: serviceaccount
+#    service_account_file: "ansible.json"
+#    project: "nomadic-vehicle-107012"
+    state: absent
+
