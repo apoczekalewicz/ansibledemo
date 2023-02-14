@@ -8,5 +8,5 @@
   tasks:
   - name: Create GCE VMs
     include_tasks: tasks/create_gcp_vms.yaml
-    loop: "{{ gce_machines }}"
+    loop: "{{ gce_machines | list }}"
 
