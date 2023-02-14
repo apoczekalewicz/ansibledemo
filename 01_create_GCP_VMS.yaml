@@ -1,0 +1,12 @@
+---
+- hosts: localhost
+  gather_facts: no
+
+  vars_files:
+  - vars/gce_machines.yaml
+  
+  tasks:
+  - name: Create GCE VMs
+    include_tasks: tasks/GCP_VMs.yaml
+    loop: "{{ gce_machines }}"
+
