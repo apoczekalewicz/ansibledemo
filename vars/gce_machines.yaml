@@ -3,6 +3,6 @@ gce_zone: europe-central2-a
 gce_source: projects/centos-cloud/global/images/centos-stream-8-v20230203
 gce_disksize: 50
 gce_machines:
-  - elastic
-  - logstash
+  - test
+#  - logstash
 gce_network_tags: http-server
