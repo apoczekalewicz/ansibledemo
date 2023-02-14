@@ -6,7 +6,7 @@
   - vars/gce_machines.yaml
   
   tasks:
-  - name: Create GCE VMs
-    include_tasks: tasks/create_gcp_vms.yaml
+  - name: Delete GCE VMs
+    include_tasks: tasks/delete_gcp_vms.yaml
     loop: "{{ gce_machines }}"
 
