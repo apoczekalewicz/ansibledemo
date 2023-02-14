@@ -1,6 +1,6 @@
 gce_type: n1-standard-2
 gce_zone: europe-central2-a
-gce_source: projects/centos-cloud/global/licenses/centos-stream
+gce_source: projects/centos-cloud/global/images/centos-stream-8-v20230203
 gce_disksize: 50
 gce_machines:
   - elastic
