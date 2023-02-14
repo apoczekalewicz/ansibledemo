@@ -1,5 +1,5 @@
 gce_type: n1-standard-2
-gce_zone: europe-west-1
+gce_zone: europe-central2-a
 gce_source: projects/centos-cloud/global/images/family/centos-8
 gce_disksize: 50
 gce_machines:
