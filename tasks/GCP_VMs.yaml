@@ -5,6 +5,8 @@
     source_image: "{{ gce_source }}"
     zone: "{{ gce_zone }}"
     auth_kind: serviceaccount
+#    service_account_file: "ansible.json"
+#    project: "nomadic-vehicle-107012"
     state: present
   register: disk
 
@@ -25,3 +27,6 @@
       items: "{{ gce_network_tags }}"
     auth_kind: serviceaccount
     state: present
+#    service_account_file: "ansible.json"
+#    project: "nomadic-vehicle-107012"
+
